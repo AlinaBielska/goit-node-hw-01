@@ -32,7 +32,7 @@ async function addContact(name, email, phone) {
     const contacts = await listContacts();
     const newListOfContacts = [...contacts, newContact];
     await fs.writeFile(contactsPath, JSON.stringify(newListOfContacts, null, 2));
-    return newContact;
+    return newListOfContacts;
 };
 
 export {
